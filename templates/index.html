@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../static/css/stylesheet.css"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Chat with Eric</h1>
+    </header>
+    <div id="container">   
+            <!-- List of connected users -->
+        <div id="userSection" style="display: none;">
+            <div id="userBox">
+                <p>Online</p>
+                <ul id="users"></ul>
+            </div>
+            <form id="disconnect">
+                <button id="disconnectUser" type="submit">Disconnect</button>
+            </form>
+        </div>
+
+        <!-- Name Input  -->
+        <form id="enterName" style="display: block;">
+            <input id="username" type="text" placeholder="Enter your name" required />
+            <button type="submit">Enter Chat</button>
+        </form>
+
+        <!-- Chat Box - Hidden until username is entered and connection made -->
+        <div id="chatSection" style="display: none;">
+            <div id="messageBox">
+                <ul id="messages"></ul>
+            </div>
+            <form id="enterMessage">
+                <input id="input" class="send"/> 
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="../static/js/socket.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Container for chat and user content */
+#container {
+    display: flex;              
+    width: 100%;
+    height: 25vh;              
+    padding: 20px;
+    position: relative;
+}
+
+/* User Section (Left Column) */
+#userSection {
+    width: 200px;               
+    background-color: #f1f1f1; 
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;           
+    position: fixed;            
+    left: 0;
+    top: 0;                  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* User List Styling */
+#userBox ul {
+    list-style: none;          
+    padding: 0;
+}
+
+#userBox li {
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#disconnectUser {
+    position: absolute;
+    width: 45%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chat Section (Centered) */
+#chatSection {
+    width: 50%;               
+    max-width: 600px;          
+    background-color: #fafafa;  
+    height: calc(100vh - 200px); /* Full height minus the header */
+    padding: 20px;
+    margin-left: 220px;         /* Create space for the fixed user section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-between;
+}
+
+#messageBox {
+    height: 100%;
+    overflow-y: auto;           /* Scrollable chat messages */
+    padding-right: 10px;
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0;
+}
+
+#messages li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e0f7fa;  
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#enterMessage {
+    margin-top: 40px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+button {
+    width: 35%;
+    padding: 10px;
+    background-color: rgb(36, 168, 45) ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: rgb(83, 226, 93);
+}
+
+/* Enter Name Form */
+#enterName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
